@@ -1,0 +1,80 @@
+    // .header__burg
+
+    .header__burg {
+        display: none;
+
+        @media (max-width: 768px) {
+            display: block;
+            width: 23px;
+            height: 17px;
+            position: relative;
+            z-index: 6;
+            cursor: pointer;
+
+            span {
+                position: absolute;
+                transform: translateY(-50%);
+                top: calc(50% - 2px);
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background-color: var(--color-text);
+                border-radius: 17px;
+                transition: all .3s ease 0s;
+
+
+                &:first-child {
+                    top: 0;
+                }
+
+                &:last-child {
+                    top: auto;
+                    bottom: 0;
+                }
+            }
+
+            &.active {
+                span {
+                    transform: scale(0);
+
+                    &:first-child {
+                        transform: rotate(-45deg);
+                        top: calc(50% - 1px);
+                    }
+
+                    &:last-child {
+                        transform: rotate(45deg);
+                        bottom: calc(50% - 1px);
+                    }
+                }
+            }
+        }
+
+        // .header__burg-menu
+
+        &-menu {
+            position: absolute;
+            width: 100%;
+            height: 468px;
+            top: 80px;
+            left: -100%;
+            background-color: var(--color-button);
+            padding: 20px;
+            transition: left 0.3s ease 0s;
+            z-index: 5;
+
+            @media (max-width:360px) {
+                top: 58px;
+            }
+
+            &.active {
+                left: 0;
+            }
+        }
+
+        // .header__burg-followed
+
+        &-followed {
+            padding: 20px 0 36px 0;
+        }
+    }

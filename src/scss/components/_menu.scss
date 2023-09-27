@@ -1,0 +1,32 @@
+.menu-items {
+    display: flex;
+    gap: calc(15px + (70 - 15) * ((100vw - 320px) / (1440 - 320)));
+
+}
+
+.menu-item {}
+
+.menu-link {
+    color: var(--color-text);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    white-space: nowrap;
+    cursor: pointer;
+
+    @media (any-hover: hover) {
+        &:hover {
+            transition: color .3s ease-out .3s;
+            color: var(--color-hover-link);
+        }
+    }
+
+    &:active {
+        transition: color .3s ease-out .3s;
+        color: var(--color-active);
+    }
+
+    @media (max-width:360px) {
+        font-size: 14px;
+    }
+}

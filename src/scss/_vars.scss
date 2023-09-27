@@ -1,0 +1,25 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "PF Din Text Cond", sans-serif;
+  --content-width: 1730px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --color-text: #5A1404;
+  --color-button: #FFCD00;
+  --color-hover-link: #a69f1d;
+  --color-hover-buttonHead: #FFD700;
+  --color-active-buttonHead: #FFA500;
+  --color-hover-buttonCheck: #801d03;
+  --color-active-buttonCheck: #d63f18;
+  --color-active: #1c0a06;
+  --color-border: #ECB200;
+  --color-title: #E63000;
+  --color-item: #5B1A0D;
+  --color-phone: #E43219;
+  --color-download: #E63000;
+}

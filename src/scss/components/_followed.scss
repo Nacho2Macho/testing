@@ -1,0 +1,31 @@
+.followed {
+
+    //. followed__socials
+    &__socials {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    // .followed__title
+
+    &__title {
+        margin: 0;
+        color: var(--color-item);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21px;
+        margin-bottom: 12px;
+
+        @media (max-width:360px) {
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+    }
+
+    // .followed__link
+
+    &__link {
+        background-color: var(--color-border);
+    }
+}

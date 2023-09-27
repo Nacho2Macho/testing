@@ -1,0 +1,170 @@
+.header {
+    padding: 24px 0 17px 0;
+    background-color: var(--light-color);
+
+    @media (max-width:360px) {
+        padding: 18px 0px 12px 0;
+    }
+
+    // .header__container
+
+    &__container {
+        @include flex-all-sb;
+        gap: 10px;
+
+        @media (max-width:1440px) {
+            padding: 0 calc(10px + (135 - 10) * ((100vw - 320px) / (1440 - 320))) 0 calc(10px + (132 - 10) * ((100vw - 320px) / (1440 - 320)));
+        }
+    }
+
+    //.header__block
+    &__block {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    //.header__logo
+    &__logo {
+        transition: scale .2s ease-in-out .2s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                scale: 1.2;
+                transition: scale .2s ease-in-out .2s;
+            }
+        }
+
+        img {
+            @media (max-width:768px) {
+                height: 21px;
+                width: auto;
+            }
+        }
+    }
+
+    // .header__menu
+
+    &__menu {
+        padding: 20px 0;
+        flex-direction: column;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+
+
+    // .header__form
+
+    &__form {
+        display: flex;
+        // .header__form-login
+
+        &-login {
+            border-radius: 120px;
+            background-color: var(--color-button);
+            color: var(--color-text);
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 160%;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 5px 42px 4px 42px;
+            min-width: 110px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 0;
+            margin-right: calc(15px + (40 - 15) * ((100vw - 320px) / (1920 - 320)));
+            cursor: pointer;
+            transition: background-color .2s ease-in .2s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    transition: background-color .2s ease-in .2s;
+                    background-color: var(--color-hover-buttonHead);
+                }
+            }
+
+            &:active {
+                background-color: var(--color-active-buttonHead);
+            }
+
+            @media (max-width:470px) {
+                margin-right: 0;
+            }
+
+            @media (max-width:360px) {
+                padding: 2px 21px;
+                min-width: auto;
+                font-size: 16px;
+            }
+
+            // .header__form-login--modal
+
+            &--modal {
+                margin-right: 0;
+            }
+        }
+
+        // .header__form-signup
+
+        &-signup {
+            color: var(--color-text);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 21px;
+            text-transform: uppercase;
+            border: 0;
+            background-color: transparent;
+            cursor: pointer;
+            padding: 0;
+            display: block;
+            transition: color .3s ease-out .3s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    transition: color .3s ease-out .3s;
+                    color: var(--color-button);
+                }
+            }
+
+            &:active {
+                transition: color .3s ease-out .3s;
+                color: var(--color-active);
+            }
+
+            @media (max-width:470px) {
+                display: none;
+            }
+
+            &--phone {
+                display: block;
+            }
+        }
+    }
+
+    // .header__modals
+
+    &__modals {
+        // .header__modals-overlay
+
+        &-overlay {
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+}

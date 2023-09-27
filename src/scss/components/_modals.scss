@@ -1,0 +1,43 @@
+// .header__modal
+
+.header__modal {
+    background-color: #fff;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    padding: 30px;
+    // .header__modal--login
+
+    &--login {}
+
+    // .header__modal--signup
+
+    &--signup {}
+
+    // .header__modal-close
+
+    &-close {
+        cursor: pointer;
+        font-size: 40px;
+        transition: transform .3s ease-in-out;
+
+        &:hover {
+            transition: transform .3s ease-in-out;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.modal-overlay--visible {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal--visible {
+    display: flex;
+    justify-content: space-between;
+}
